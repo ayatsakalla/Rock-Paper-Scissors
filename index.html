@@ -16,18 +16,24 @@
 </head>
 
 <body>
+    <!-- container start  -->
     <div class="container-fluid">
+
+        <!-- title of page -->
         <h1 class="text-center">Rock, Paper, Scissors</h1>
 
+        <!-- player + comp names start -->
         <div class="row d-flex justify-content-around">
             <div class="col-md-2">
-                <h2 class="d-flex justify-content-center align-items-center">Player</h2>
+                <h2 class="d-flex justify-content-center align-items-center" id="name">Player</h2>
             </div>
             <div class="col-md-2">
                 <h2 class="d-flex justify-content-center align-items-center">Computer</h2>
             </div>
         </div>
+        <!-- player + comp names end -->
 
+        <!-- scores start  -->
         <div class="row d-flex justify-content-around">
             <div class="col-md-2 d-flex justify-content-center">
                 <h4 class="d-flex justify-content-center align-items-center">#</h4>
@@ -36,7 +42,9 @@
                 <h4 class="d-flex justify-content-center align-items-center">#</h4>
             </div>
         </div>
+        <!-- scores end -->
 
+        <!-- picture choices start -->
         <div class="row d-flex justify-content-around">
             <div class="col-md-4 d-flex justify-content-center">
                 <img src="https://picsum.photos/400" class="img-fluid">
@@ -45,39 +53,51 @@
                 <img src="https://picsum.photos/400" class="img-fluid">
             </div>
         </div>
+        <!-- picture choices end -->
 
+        <!-- text choices start -->
+        <div class="row d-flex justify-content-around">
+            <div class="col-md-4 d-flex justify-content-center">
+                <h3 class="d-flex justify-content-center align-items-center" id="playerChoice"></h3>
+            </div>
+            <div class="col-md-4 d-flex justify-content-center">
+                <h3 class="d-flex justify-content-center align-items-center" id="compChoice"></h3>
+            </div>
+        </div>
+        <!-- text choices end -->
+        
+        <!-- results start -->
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-8 d-flex justify-content-center">
+                <h1 id="winLossTie"></h1>
+            </div>
+        </div>
+        <!-- results end -->
+
+        <!-- buttons start -->
         <div class="row d-flex justify-content-center p-3">
             <div class="col-md-3 d-flex justify-content-center fit-content">
-                <button>Rock</button>
+                <button onclick="playRound(rock)">Rock</button>
             </div>
 
             <div class="col-md-3 d-flex justify-content-center fit-content">
-                <button>Paper</button>
+                <button onclick="playRound(paper)">Paper</button>
             </div>
 
             <div class="col-md-3 d-flex justify-content-center fit-content">
-                <button>Scissors</button>
+                <button onclick="playRound(scissors)">Scissors</button>
             </div>
         </div>
-
-
-
-
-
-
-
-
+        <!-- buttons end -->
 
     </div>
-
-
-
-
-
+    <!-- container end -->
 
     <footer>
         <!-- place footer here -->
     </footer>
+
+
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
