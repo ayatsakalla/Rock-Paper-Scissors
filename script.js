@@ -2,7 +2,8 @@ let playerImg = document.getElementById('playerChoiceImg');
 let compImg = document.getElementById('compChoiceImg');
 let userScore = 0;
 let compScore = 0; 
-
+let compChoice = '';
+let userChoice = '';
 
 // collecting player username start
 let userName = prompt('Enter Username:');
@@ -31,8 +32,6 @@ function compWin() {
 
 function playRound(userChoice) {
     //get computer choice
-    let compChoice;
-    let userChoice;
     let randomNum = Math.floor(Math.random()*3);
     //turn randomNum into string value
     if (randomNum === 0) {
@@ -45,14 +44,14 @@ function playRound(userChoice) {
 
     //display choices 
 
-    playerImg.src = `${userChoice}.jpg`
-    compImg.src = `${compChoice}.jpg`
+    playerImg.src = `${userChoice}.jpg`;
+    compImg.src = `${compChoice}.jpg`;
 
     // user choices and win/loss/tie to comp choices
     if (userChoice === compChoice) {
         winLossTie.innerHTML = "It's a tie!";
         userChose.innerHTML = `You chose ${userChoice}`;
-        compChose.innerHTML = `You chose ${compChoice}`;
+        compChose.innerHTML = `Computer chose ${compChoice}`;
 
     } else if (userChoice === 'rock' && compChoice === 'paper') {
         compWin(); 
@@ -79,7 +78,7 @@ function playRound(userChoice) {
         userChose.innerHTML = "You Chose Scissors";
         compChose.innerHTML = "Computer Chose Paper";
 
-    } else (userChoice === 'scissors' && compChoice === 'rock') {
+    } else if (userChoice === 'scissors' && compChoice === 'rock') {
         compWin();
         userChose.innerHTML = "You Chose Scissors";
         compChose.innerHTML = "Computer Chose Rock";
