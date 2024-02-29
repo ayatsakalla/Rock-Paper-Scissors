@@ -20,6 +20,21 @@ window.addEventListener('mousemove', function(e) {
 }, false);
 // mouse cursor trail end
 
+// starry bg start
+for(let i = 1; i <= 75; i++){
+    let stars = document.createElement('div');
+    stars.classList.add('stars');
+    document.querySelector('.sec').appendChild(stars);
+}
+function animateStars(){
+    let AllStars = document.querySelectorAll('.stars');
+    let num = Math.floor(Math.random() * AllStars.length);
+    AllStars [num].classList.toggle('animate');
+}
+setInterval(animateStars, 50);
+
+// starry bg end
+
 // global 
 let playerImg = document.getElementById('playerChoiceImg');
 let compImg = document.getElementById('compChoiceImg');

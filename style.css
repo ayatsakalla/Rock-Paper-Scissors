@@ -33,3 +33,34 @@ body {
     -webkit-text-fill-color: transparent;
 }
 /* cursor trail end */
+
+/* starry background start */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+.sec {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden
+}
+
+.stars {
+    position: relative;
+    color: #000;
+}
+
+.stars::before {
+    content: '\f005';
+    font-family: fontAwesome;
+}
+
+.star.animate {
+    color: #0f0;
+    text-shadow: 0 0 5px #0f0, 
+    0 0 20px #0f0, 
+    0 0 50px #0f0;
+}
+/* starry background end */
