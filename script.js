@@ -1,5 +1,7 @@
 let playerImg = document.getElementById('playerChoiceImg');
 let compImg = document.getElementById('compChoiceImg');
+let userScore = 0;
+let compScore = 0; 
 
 
 // collecting player username start
@@ -8,10 +10,29 @@ let namez = `${userName}`;
 let playerName = document.querySelector('#name');
 playerName.innerHTML = `${namez}`;
 // collecting player username end
+let welcome = `Welcome ${namez} to my game of rock, paper, scissors! Play against the computer, and play best out of three!`;
+let message = document.querySelector('#welcome');
+message.innerHTML = `${welcome}`;
+// displaying player welcome start
+
+// displaying player welcome end
+
+function userWin() {
+    userScore++;
+    userScoreboard.innerHTML = userScore;
+    winLossTie.innerHTML = "You won! Yippee!!";
+}
+
+function compWin() {
+    compScore++;
+    compScoreboard.innerHTML = compScore;
+    winLossTie.innerHTML = "You Lost. Womp womp ;(";
+}
 
 function playRound(userChoice) {
     //get computer choice
-    let compChoice
+    let compChoice;
+    let userChoice;
     let randomNum = Math.floor(Math.random()*3);
     //turn randomNum into string value
     if (randomNum === 0) {
@@ -27,5 +48,40 @@ function playRound(userChoice) {
     playerImg.src = `${userChoice}.jpg`
     compImg.src = `${compChoice}.jpg`
 
+    // user choices and win/loss/tie to comp choices
+    if (userChoice === compChoice) {
+        winLossTie.innerHTML = "It's a tie!";
+        userChose.innerHTML = `You chose ${userChoice}`;
+        compChose.innerHTML = `You chose ${compChoice}`;
 
+    } else if (userChoice === 'rock' && compChoice === 'paper') {
+        compWin(); 
+        userChose.innerHTML = "You Chose Rock";
+        compChose.innerHTML = "Computer Chose Paper";
+
+    } else if (userChoice === 'rock' && compChoice === 'scissors') {
+        userWin();
+        userChose.innerHTML = "You Chose Rock";
+        compChose.innerHTML = "Computer Chose Scissors";
+
+    } else if (userChoice === 'paper' && compChoice === 'scissors') {
+        compWin();
+        userChose.innerHTML = "You Chose Paper";
+        compChose.innerHTML = "Computer Chose Scissors";
+
+    } else if (userChoice === 'paper' && compChoice === 'rock') {
+        userWin();
+        userChose.innerHTML = "You Chose Paper";
+        compChose.innerHTML = "Computer Chose Rock";
+
+    } else if (userChoice === 'scissors' && compChoice === 'paper') {
+        userWin();
+        userChose.innerHTML = "You Chose Scissors";
+        compChose.innerHTML = "Computer Chose Paper";
+
+    } else (userChoice === 'scissors' && compChoice === 'rock') {
+        compWin();
+        userChose.innerHTML = "You Chose Scissors";
+        compChose.innerHTML = "Computer Chose Rock";
+    }
 }
