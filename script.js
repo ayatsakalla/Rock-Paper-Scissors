@@ -4,6 +4,10 @@ let userScore = 0;
 let compScore = 0; 
 let compChoice = '';
 let userChoice = '';
+let userChose = document.querySelector('#userChose');
+let compChose = document.querySelector('#compChose');
+let userScoreboard = document.querySelector('#userScore');
+let compScoreboard = document.querySelector('#compScore');
 
 // collecting player username start
 let userName = prompt('Enter Username:');
@@ -18,17 +22,6 @@ message.innerHTML = `${welcome}`;
 
 // displaying player welcome end
 
-function userWin() {
-    userScore++;
-    userScoreboard.innerHTML = userScore;
-    winLossTie.innerHTML = "You won! Yippee!!";
-}
-
-function compWin() {
-    compScore++;
-    compScoreboard.innerHTML = compScore;
-    winLossTie.innerHTML = "You Lost. Womp womp ;(";
-}
 
 function playRound(userChoice) {
     //get computer choice
@@ -82,5 +75,16 @@ function playRound(userChoice) {
         compWin();
         userChose.innerHTML = "You Chose Scissors";
         compChose.innerHTML = "Computer Chose Rock";
+    }
+    function userWin() {
+        userScore++;
+        userScoreboard.innerHTML = userScore;
+        winLossTie.innerHTML = "You won! Yippee!!";
+    }
+    
+    function compWin() {
+        compScore++;
+        compScoreboard.innerHTML = compScore;
+        winLossTie.innerHTML = "You Lost. Womp womp ;(";
     }
 }
