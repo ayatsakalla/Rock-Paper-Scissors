@@ -1,12 +1,31 @@
 body {
     width: 100%;
     height: 100%;
-    background-color: #000047;
+    background-color: #000047; 
+}
+
+html {
+    cursor: url('cursor/north-star-side-mouse.png'), default;
+}
+
+button:hover {
+    cursor: url('cursor/north-star-mouse.png'), pointer;
 }
 
 .fit-content {
     width: fit-content;
 }
+
+/* font start */
+@font-face {
+    font-family: 'starryFont';
+    src: url('HalloWhiteDisplayPersonalUse-4BWeY.otf');
+}
+
+.starryFont {
+    font-family: 'starryFont';
+}
+/* font end */
 
 /* cursor trail start */
 .star {
@@ -43,12 +62,12 @@ body {
 
 .sec {
     position: relative;
-    min-height: 100vh;
-    overflow: hidden
+    height: 100vh;
+    overflow: hidden;
 }
 
 .sparkle {
-    position: relative;
+    position: absolute;
     color: #222;
 }
 
@@ -62,5 +81,11 @@ body {
     text-shadow: 0 0 5px yellow, 
     0 0 20px yellow, 
     0 0 50px yellow;
+}
+
+.container-fluid {
+    position: absolute;
+    top: 2%;
+    right: 0;
 }
 /* starry background end */

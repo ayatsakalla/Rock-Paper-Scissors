@@ -21,12 +21,13 @@ window.addEventListener('mousemove', function(e) {
 // mouse cursor trail end
 
 // starry bg start
-for(let i = 1; i <= 75; i++){
+for(let i = 1; i <= 120; i++){
     let sparkles = document.createElement('div');
     sparkles.classList.add('sparkle');
     let size = Math.random() * 20;
     sparkles.style.fontSize = 10 + size + 'px';
     sparkles.style.left = Math.random() * + innerWidth + 'px';
+    sparkles.style.top = Math.random() * + innerWidth + 'px';
     document.querySelector('.sec').appendChild(sparkles);
 }
 function animateSparkles(){
