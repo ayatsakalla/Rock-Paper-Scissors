@@ -47,20 +47,20 @@ body {
     overflow: hidden
 }
 
-.stars {
+.sparkle {
     position: relative;
-    color: #000;
+    color: #222;
 }
 
-.stars::before {
+.sparkle::before {
     content: '\f005';
     font-family: fontAwesome;
 }
 
-.star.animate {
-    color: #0f0;
-    text-shadow: 0 0 5px #0f0, 
-    0 0 20px #0f0, 
-    0 0 50px #0f0;
+.sparkle.animate {
+    color: yellow;
+    text-shadow: 0 0 5px yellow, 
+    0 0 20px yellow, 
+    0 0 50px yellow;
 }
 /* starry background end */

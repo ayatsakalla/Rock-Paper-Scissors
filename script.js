@@ -22,16 +22,19 @@ window.addEventListener('mousemove', function(e) {
 
 // starry bg start
 for(let i = 1; i <= 75; i++){
-    let stars = document.createElement('div');
-    stars.classList.add('stars');
-    document.querySelector('.sec').appendChild(stars);
+    let sparkles = document.createElement('div');
+    sparkles.classList.add('sparkle');
+    let size = Math.random() * 20;
+    sparkles.style.fontSize = 10 + size + 'px';
+    sparkles.style.left = Math.random() * + innerWidth + 'px';
+    document.querySelector('.sec').appendChild(sparkles);
 }
-function animateStars(){
-    let AllStars = document.querySelectorAll('.stars');
-    let num = Math.floor(Math.random() * AllStars.length);
-    AllStars [num].classList.toggle('animate');
+function animateSparkles(){
+    let AllSparkles = document.querySelectorAll('.sparkle');
+    let num = Math.floor(Math.random() * AllSparkles.length);
+    AllSparkles[num].classList.toggle('animate');
 }
-setInterval(animateStars, 50);
+setInterval(animateSparkles, 50);
 
 // starry bg end
 
