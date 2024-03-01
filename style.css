@@ -9,7 +9,11 @@ html {
 }
 
 button:hover {
-    cursor: url('cursor/north-star-mouse.png'), pointer;
+    cursor: url('cursor/north-star-mouse.png'), auto;
+}
+
+.cursorz:hover {
+    cursor: url('cursor/north-star-mouse.png'), auto;
 }
 
 .fit-content {
@@ -19,11 +23,20 @@ button:hover {
 /* font start */
 @font-face {
     font-family: 'starryFont';
-    src: url('HalloWhiteDisplayPersonalUse-4BWeY.otf');
+    src: url('fonts/HalloWhiteDisplayPersonalUse-4BWeY.otf');
 }
 
 .starryFont {
     font-family: 'starryFont';
+}
+
+@font-face {
+    font-family: 'barelyEnough';
+    src: url('fonts/BarelyEnoughRegular-JRD6o.ttf');
+}
+
+.waltFont {
+    font-family: 'barelyEnough';
 }
 /* font end */
 

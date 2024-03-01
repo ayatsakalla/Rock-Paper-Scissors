@@ -36,10 +36,9 @@ function animateSparkles(){
     AllSparkles[num].classList.toggle('animate');
 }
 setInterval(animateSparkles, 50);
-
 // starry bg end
 
-// global 
+// global start
 let playerImg = document.getElementById('playerChoiceImg');
 let compImg = document.getElementById('compChoiceImg');
 let userScore = 0;
@@ -50,7 +49,7 @@ let userChose = document.querySelector('#userChose');
 let compChose = document.querySelector('#compChose');
 let userScoreboard = document.querySelector('#userScore');
 let compScoreboard = document.querySelector('#compScore');
-
+// global end
 
 // collecting player username start
 let userName = prompt('Enter Username:');
@@ -58,16 +57,24 @@ let namez = `${userName}`;
 let playerName = document.querySelector('#name');
 playerName.innerHTML = `${namez}`;
 // collecting player username end
-let welcome = `Welcome ${namez} to my game of rock, paper, scissors! Play against the computer, and play best out of three!`;
+
+// collecting computer username start 
+let compName = prompt('Enter Opponent Name:');
+let compNamez = `${compName}`;
+let computerName = document.querySelector('#compName');
+computerName.innerHTML = `${compNamez}`;
+// collecting computer username end 
+
+// displaying computer + player welcome start 
+let welcome = `Welcome ${namez} to my game of rock, paper, scissors! Play against ${compNamez}, and try to win. Best of luck!`;
 let message = document.querySelector('#welcome');
 message.innerHTML = `${welcome}`;
-// displaying player welcome start
+// displaying computer + player welcome end
 
-// displaying player welcome end
-
-
+// actually play the round with userChoice and compChoice
 function playRound(userChoice) {
-    //get computer choice
+
+    //get computer choice start 
     let randomNum = Math.floor(Math.random()*3);
     //turn randomNum into string value
     if (randomNum === 0) {
@@ -77,57 +84,81 @@ function playRound(userChoice) {
     } else {
         compChoice = 'scissors';
     }
+    // get random computer choice end 
 
-    //display choices 
-
+    // img display choices start
     playerImg.src = `${userChoice}.jpg`;
     compImg.src = `${compChoice}.jpg`;
+    //img display choices end
 
-    // user choices and win/loss/tie to comp choices
+    // user choices and win/loss/tie to comp choices start
     if (userChoice === compChoice) {
         winLossTie.innerHTML = "It's a tie!";
-        userChose.innerHTML = `You chose ${userChoice}`;
-        compChose.innerHTML = `Computer chose ${compChoice}`;
+        userChose.innerHTML = `${namez} chose ${userChoice}`;
+        compChose.innerHTML = `${compNamez} chose ${compChoice}`;
 
     } else if (userChoice === 'rock' && compChoice === 'paper') {
         compWin(); 
-        userChose.innerHTML = "You Chose Rock";
-        compChose.innerHTML = "Computer Chose Paper";
+        userChose.innerHTML = `${namez} Chose Rock`;
+        compChose.innerHTML = `${compNamez} Chose Paper`;
 
     } else if (userChoice === 'rock' && compChoice === 'scissors') {
         userWin();
-        userChose.innerHTML = "You Chose Rock";
-        compChose.innerHTML = "Computer Chose Scissors";
+        userChose.innerHTML = `${namez} Chose Rock`;
+        compChose.innerHTML = `${compNamez} Chose Scissors`;
 
     } else if (userChoice === 'paper' && compChoice === 'scissors') {
         compWin();
-        userChose.innerHTML = "You Chose Paper";
-        compChose.innerHTML = "Computer Chose Scissors";
+        userChose.innerHTML = `${namez} Chose Paper`;
+        compChose.innerHTML = `${compNamez} Chose Scissors`;
 
     } else if (userChoice === 'paper' && compChoice === 'rock') {
         userWin();
-        userChose.innerHTML = "You Chose Paper";
-        compChose.innerHTML = "Computer Chose Rock";
+        userChose.innerHTML = `${namez} Chose Paper`;
+        compChose.innerHTML = `${compNamez} Chose Rock`;
 
     } else if (userChoice === 'scissors' && compChoice === 'paper') {
         userWin();
-        userChose.innerHTML = "You Chose Scissors";
-        compChose.innerHTML = "Computer Chose Paper";
+        userChose.innerHTML = `${namez} Chose Scissors`;
+        compChose.innerHTML = `${compNamez} Chose Paper`;
 
     } else if (userChoice === 'scissors' && compChoice === 'rock') {
         compWin();
-        userChose.innerHTML = "You Chose Scissors";
-        compChose.innerHTML = "Computer Chose Rock";
+        userChose.innerHTML = `${namez} Chose Scissors`;
+        compChose.innerHTML = `${compNamez} Chose Rock`;
     }
+    // user choices and win/loss/tie to comp choices start
+
+    // scoreboard for when comp/user wins round start 
     function userWin() {
         userScore++;
         userScoreboard.innerHTML = userScore;
-        winLossTie.innerHTML = "You won! Yippee!!";
+        winLossTie.innerHTML = `${namez} won! Yippee!!`;
     }
     
     function compWin() {
         compScore++;
         compScoreboard.innerHTML = compScore;
-        winLossTie.innerHTML = "You Lost. Womp womp ;(";
+        winLossTie.innerHTML = `${compNamez} Won. Womp womp ;(`;
     }
+    // scoreboard for when comp/user wins round ends
+
+    let winArray = ['HIP HIP HOORAY YOU WON',
+    'WINNA WINNA CHICKEN DINNA',
+    'YOU DA 🐐',
+    'TOO GOOD TO LOSE'];
+
+    let loseArray = ['Wow you just lost to a bot', 
+    'Embarrasing you lost!',
+    'Personally, I would never take that loss',
+    'Tough loss, better luck next time!'];
+
+    let rndmNumWin = Math.floor(Math.random()*winArray.length);
+    let rndmNumLoss = Math.floor(Math.random()*loseArray.length);
+    if (userScore === 3) {
+        document.getElementById('winLossTie').innerHTML = winArray[rndmNumWin];
+      } else if (compScore === 3) {
+        document.getElementById('winLossTie').innerHTML = loseArray[rndmNumLoss];
+      }
+
 }

@@ -35,15 +35,15 @@
         <h1 class="text-center text-white starryFont">Rock, Paper, Scissors</h1>
 
         <!-- welcoming message -->
-        <h4 class="text-center text-white" id="welcome"></h4>
+        <h4 class="text-center text-white waltFont" id="welcome"></h4>
 
         <!-- player + comp names start -->
         <div class="row d-flex justify-content-around">
             <div class="col-md-2">
-                <h2 class="d-flex justify-content-center align-items-center text-white" id="name">Player</h2>
+                <h2 class="d-flex justify-content-center align-items-center text-white waltFont" id="name">Player</h2>
             </div>
             <div class="col-md-2">
-                <h2 class="d-flex justify-content-center align-items-center text-white">Computer</h2>
+                <h2 class="d-flex justify-content-center align-items-center text-white waltFont" id="compName">Computer</h2>
             </div>
         </div>
         <!-- player + comp names end -->
@@ -51,10 +51,10 @@
         <!-- scores start  -->
         <div class="row d-flex justify-content-around">
             <div class="col-md-2 d-flex justify-content-center">
-                <h4 class="d-flex justify-content-center align-items-center text-white" id="userScore">0</h4>
+                <h4 class="d-flex justify-content-center align-items-center text-white waltFont" id="userScore">0</h4>
             </div>
             <div class="col-md-2 d-flex justify-content-center">
-                <h4 class="d-flex justify-content-center align-items-center text-white" id="compScore">0</h4>
+                <h4 class="d-flex justify-content-center align-items-center text-white waltFont" id="compScore">0</h4>
             </div>
         </div>
         <!-- scores end -->
@@ -73,10 +73,10 @@
         <!-- text choices start -->
         <div class="row d-flex justify-content-around">
             <div class="col-md-3 d-flex justify-content-center">
-                <h3 class="d-flex justify-content-center align-items-center text-white" id="userChose"></h3>
+                <h3 class="d-flex justify-content-center align-items-center text-white waltFont" id="userChose"></h3>
             </div>
             <div class="col-md-3 d-flex justify-content-center align-items-center">
-                <h3 class="d-flex justify-content-center align-items-center text-white" id="compChose"></h3>
+                <h3 class="d-flex justify-content-center align-items-center text-white waltFont" id="compChose"></h3>
             </div>
         </div>
         <!-- text choices end -->
@@ -84,7 +84,7 @@
         <!-- results start -->
         <div class="row d-flex justify-content-center">
             <div class="col-md-8 d-flex justify-content-center">
-                <h1 id="winLossTie" class="text-white"></h1>
+                <h1 id="winLossTie" class="text-white waltFont"></h1>
             </div>
         </div>
         <!-- results end -->
@@ -92,15 +92,21 @@
         <!-- buttons start -->
         <div class="row d-flex justify-content-center p-3">
             <div class="col-md-3 d-flex justify-content-center fit-content">
-                <button onclick="playRound('rock')" class="text-white bg-danger">Rock</button>
+                <button onclick="playRound('rock')" class="bg-danger">
+                    <h1 class="text-white waltFont cursorz">Rock</h1>
+                </button>
             </div>
 
             <div class="col-md-3 d-flex justify-content-center fit-content">
-                <button onclick="playRound('paper')" class="text-white bg-danger">Paper</button>
+                <button onclick="playRound('paper')" class="text-white waltFont bg-danger">
+                    <h1 class="text-white waltFont cursorz">Paper</h1>
+                </button>
             </div>
 
             <div class="col-md-3 d-flex justify-content-center fit-content">
-                <button onclick="playRound('scissors')" class="text-white bg-danger">Scissors</button>
+                <button onclick="playRound('scissors')" class="text-white waltFont bg-danger">
+                    <h1 class="text-white waltFont cursorz">Scissors</h1>
+                </button>
             </div>
         </div>
         <!-- buttons end -->
