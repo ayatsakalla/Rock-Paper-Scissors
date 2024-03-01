@@ -29,18 +29,18 @@
     <div class="container-fluid">
 
         <!-- title of page -->
-        <h1 class="text-center">Rock, Paper, Scissors</h1>
+        <h1 class="text-center text-white">Rock, Paper, Scissors</h1>
 
         <!-- welcoming message -->
-        <h4 class="text-center" id="welcome"></h4>
+        <h4 class="text-center text-white" id="welcome"></h4>
 
         <!-- player + comp names start -->
         <div class="row d-flex justify-content-around">
             <div class="col-md-2">
-                <h2 class="d-flex justify-content-center align-items-center" id="name">Player</h2>
+                <h2 class="d-flex justify-content-center align-items-center text-white" id="name">Player</h2>
             </div>
             <div class="col-md-2">
-                <h2 class="d-flex justify-content-center align-items-center">Computer</h2>
+                <h2 class="d-flex justify-content-center align-items-center text-white">Computer</h2>
             </div>
         </div>
         <!-- player + comp names end -->
@@ -48,10 +48,10 @@
         <!-- scores start  -->
         <div class="row d-flex justify-content-around">
             <div class="col-md-2 d-flex justify-content-center">
-                <h4 class="d-flex justify-content-center align-items-center" id="userScore">0</h4>
+                <h4 class="d-flex justify-content-center align-items-center text-white" id="userScore">0</h4>
             </div>
             <div class="col-md-2 d-flex justify-content-center">
-                <h4 class="d-flex justify-content-center align-items-center" id="compScore">0</h4>
+                <h4 class="d-flex justify-content-center align-items-center text-white" id="compScore">0</h4>
             </div>
         </div>
         <!-- scores end -->
@@ -70,10 +70,10 @@
         <!-- text choices start -->
         <div class="row d-flex justify-content-around">
             <div class="col-md-3 d-flex justify-content-center">
-                <h3 class="d-flex justify-content-center align-items-center" id="userChose"></h3>
+                <h3 class="d-flex justify-content-center align-items-center text-white" id="userChose"></h3>
             </div>
             <div class="col-md-3 d-flex justify-content-center align-items-center">
-                <h3 class="d-flex justify-content-center align-items-center" id="compChose"></h3>
+                <h3 class="d-flex justify-content-center align-items-center text-white" id="compChose"></h3>
             </div>
         </div>
         <!-- text choices end -->
@@ -81,7 +81,7 @@
         <!-- results start -->
         <div class="row d-flex justify-content-center">
             <div class="col-md-8 d-flex justify-content-center">
-                <h1 id="winLossTie"></h1>
+                <h1 id="winLossTie" class="text-white"></h1>
             </div>
         </div>
         <!-- results end -->
@@ -89,15 +89,15 @@
         <!-- buttons start -->
         <div class="row d-flex justify-content-center p-3">
             <div class="col-md-3 d-flex justify-content-center fit-content">
-                <button onclick="playRound('rock')">Rock</button>
+                <button onclick="playRound('rock')" class="text-white bg-danger">Rock</button>
             </div>
 
             <div class="col-md-3 d-flex justify-content-center fit-content">
-                <button onclick="playRound('paper')">Paper</button>
+                <button onclick="playRound('paper')" class="text-white bg-danger">Paper</button>
             </div>
 
             <div class="col-md-3 d-flex justify-content-center fit-content">
-                <button onclick="playRound('scissors')">Scissors</button>
+                <button onclick="playRound('scissors')" class="text-white bg-danger">Scissors</button>
             </div>
         </div>
         <!-- buttons end -->
