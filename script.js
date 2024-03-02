@@ -155,10 +155,24 @@ function playRound(userChoice) {
 
     let rndmNumWin = Math.floor(Math.random()*winArray.length);
     let rndmNumLoss = Math.floor(Math.random()*loseArray.length);
+    
     if (userScore === 3) {
         document.getElementById('winLossTie').innerHTML = winArray[rndmNumWin];
       } else if (compScore === 3) {
         document.getElementById('winLossTie').innerHTML = loseArray[rndmNumLoss];
       }
+
+      function reset() {
+        resetScore();
+        document.getElementById('winLossTie').innerHTML = "";
+    }
+
+    function resetScore() {
+        userScore = 0;
+        compScore = 0; 
+        userScoreboard.innerHTML = "0";
+        compScoreboard.innerHTML = "0";
+    
+    }
 
 }

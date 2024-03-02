@@ -102,3 +102,9 @@ button:hover {
     right: 0;
 }
 /* starry background end */
+
+button {
+    width: 10%;
+    height: 10%;
+    border-radius: 10%;
+}
