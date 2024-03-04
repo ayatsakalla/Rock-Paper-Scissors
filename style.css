@@ -104,7 +104,12 @@ button:hover {
 /* starry background end */
 
 button {
-    width: 10%;
-    height: 10%;
-    border-radius: 10%;
+    height: fit-content;
+    width: fit-content;
+    border-radius: 50%;
+    background-color: #a6a8ff;
+}
+
+.pding {
+    padding: 10%; 
 }

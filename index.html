@@ -35,25 +35,25 @@
         <h1 class="text-center text-white starryFont">Rock, Paper, Scissors</h1>
 
         <!-- welcoming message -->
-        <h4 class="text-center text-white waltFont" id="welcome"></h4>
+        <h5 class="text-center text-white waltFont" id="welcome"></h5>
 
         <!-- player + comp names start -->
         <div class="row d-flex justify-content-around">
-            <div class="col-md-2">
-                <h2 class="d-flex justify-content-center align-items-center text-white waltFont" id="name">Player</h2>
+            <div class="col-2">
+                <h3 class="d-flex justify-content-center align-items-center text-white waltFont" id="name">Player</h3>
             </div>
-            <div class="col-md-2">
-                <h2 class="d-flex justify-content-center align-items-center text-white waltFont" id="compName">Computer</h2>
+            <div class="col-2">
+                <h3 class="d-flex justify-content-center align-items-center text-white waltFont" id="compName">Computer</h3>
             </div>
         </div>
         <!-- player + comp names end -->
 
         <!-- scores start  -->
         <div class="row d-flex justify-content-around">
-            <div class="col-md-2 d-flex justify-content-center">
+            <div class="col-2 d-flex justify-content-center">
                 <h4 class="d-flex justify-content-center align-items-center text-white waltFont" id="userScore">0</h4>
             </div>
-            <div class="col-md-2 d-flex justify-content-center">
+            <div class="col-2 d-flex justify-content-center">
                 <h4 class="d-flex justify-content-center align-items-center text-white waltFont" id="compScore">0</h4>
             </div>
         </div>
@@ -61,61 +61,61 @@
 
         <!-- picture choices start -->
         <div class="row d-flex justify-content-around">
-            <div class="col-md-4 d-flex justify-content-center">
-                <img src="https://picsum.photos/400" id="playerChoiceImg" class="img-fluid">
+            <div class="col-2 d-flex justify-content-center">
+                <img src="playerIcons/icon-one.png" id="playerChoiceImg" class="img-fluid rounded-3">
             </div>
-            <div class="col-md-4 d-flex justify-content-center">
-                <img src="https://picsum.photos/400" id="compChoiceImg" class="img-fluid">
+            <div class="col-2 d-flex justify-content-center">
+                <img src="playerIcons/icon-two.png" id="compChoiceImg" class="img-fluid rounded-3">
             </div>
         </div>
         <!-- picture choices end -->
 
         <!-- text choices start -->
         <div class="row d-flex justify-content-around">
-            <div class="col-md-3 d-flex justify-content-center">
-                <h3 class="d-flex justify-content-center align-items-center text-white waltFont" id="userChose"></h3>
+            <div class="col-3 d-flex justify-content-center align-items-center text-center">
+                <h4 class="d-flex justify-content-center align-items-center text-white waltFont" id="userChose"></h4>
             </div>
-            <div class="col-md-3 d-flex justify-content-center align-items-center">
-                <h3 class="d-flex justify-content-center align-items-center text-white waltFont" id="compChose"></h3>
+            <div class="col-3 d-flex justify-content-center align-items-center text">
+                <h4 class="d-flex justify-content-center align-items-center text-white waltFont" id="compChose"></h4>
             </div>
         </div>
         <!-- text choices end -->
         
         <!-- results start -->
         <div class="row d-flex justify-content-center">
-            <div class="col-md-8 d-flex justify-content-center">
-                <h1 id="winLossTie" class="text-white waltFont"></h1>
+            <div class="col-8 d-flex justify-content-center">
+                <h3 id="winLossTie" class="text-white waltFont"></h3>
             </div>
         </div>
         <!-- results end -->
 
         <!-- button - choices - start -->
         <div class="row d-flex justify-content-center p-3">
-            <div class="col-md-3 d-flex justify-content-center fit-content">
-                <button onclick="playRound('rock')" class="bg-danger">
-                    <h1 class="text-white waltFont cursorz">Rock</h1>
+            <div class="col-3 d-flex justify-content-center fit-content">
+                <button onclick="playRound('rock')" class="pding">
+                    <h3 class="text-white waltFont cursorz">Rock</h3>
                 </button>
             </div>
 
-            <div class="col-md-3 d-flex justify-content-center fit-content">
-                <button onclick="playRound('paper')" class="bg-danger">
-                    <h1 class="text-white waltFont cursorz">Paper</h1>
+            <div class="col-3 d-flex justify-content-center fit-content">
+                <button onclick="playRound('paper')" class="pding">
+                    <h3 class="text-white waltFont cursorz">Paper</h3>
                 </button>
             </div>
 
-            <div class="col-md-3 d-flex justify-content-center fit-content">
-                <button onclick="playRound('scissors')" class="bg-danger">
-                    <h1 class="text-white waltFont cursorz">Scissors</h1>
+            <div class="col-3 d-flex justify-content-center fit-content">
+                <button onclick="playRound('scissors')" class="pding">
+                    <h3 class="text-white waltFont cursorz">Scissors</h3>
                 </button>
             </div>
         </div>
         <!-- button - choices - end -->
 
         <!-- reset button start -->
-        <div class="row d-flex justify-content-center p-3">
-            <div class="col-md-3 d-flex justify-content-center fit-content">
-                <button onclick="reset()" class="bg-danger">
-                    <h1 class="text-white waltFont cursorz">RESET!</h1>
+        <div class="row d-flex justify-content-center p-3 m-0">
+            <div class="col-3 d-flex justify-content-center fit-content m-0">
+                <button onclick="reset()" class="pding m-0">
+                    <h3 class="text-white waltFont cursorz">RESET!</h3>
                 </button>
             </div>
         </div>
@@ -123,10 +123,6 @@
 
     </div>
     <!-- container end -->
-
-    <footer>
-        <!-- place footer here -->
-    </footer>
 
 
     <!-- Bootstrap JavaScript Libraries -->

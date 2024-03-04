@@ -141,38 +141,38 @@ function playRound(userChoice) {
         compScoreboard.innerHTML = compScore;
         winLossTie.innerHTML = `${compNamez} Won. Womp womp ;(`;
     }
-    // scoreboard for when comp/user wins round ends
 
-    let winArray = ['HIP HIP HOORAY YOU WON',
-    'WINNA WINNA CHICKEN DINNA',
-    'YOU DA 🐐',
-    'TOO GOOD TO LOSE'];
+    let winArray = ['Game over. HIP HIP HOORAY YOU WON',
+    'Game over. WINNA WINNA CHICKEN DINNA',
+    'Game over. YOU DA 🐐',
+    'Game over. TOO GOOD TO LOSE'];
 
-    let loseArray = ['Wow you just lost to a bot', 
-    'Embarrasing you lost!',
-    'Personally, I would never take that loss',
-    'Tough loss, better luck next time!'];
+    let loseArray = ['Game over. Wow you just lost to a bot', 
+    'Game over. Embarrasing you lost!',
+    'Game over. Personally, I would never take that loss',
+    'Game over. Tough loss, better luck next time!'];
 
     let rndmNumWin = Math.floor(Math.random()*winArray.length);
     let rndmNumLoss = Math.floor(Math.random()*loseArray.length);
-    
+
     if (userScore === 3) {
         document.getElementById('winLossTie').innerHTML = winArray[rndmNumWin];
       } else if (compScore === 3) {
         document.getElementById('winLossTie').innerHTML = loseArray[rndmNumLoss];
       }
-
-      function reset() {
-        resetScore();
-        document.getElementById('winLossTie').innerHTML = "";
-    }
-
-    function resetScore() {
-        userScore = 0;
-        compScore = 0; 
-        userScoreboard.innerHTML = "0";
-        compScoreboard.innerHTML = "0";
-    
-    }
-
 }
+
+function reset() {
+    resetScore();
+    document.getElementById('winLossTie').innerHTML = "";
+}
+
+function resetScore() {
+    userScore = 0;
+    compScore = 0; 
+    userScoreboard.innerHTML = "0";
+    compScoreboard.innerHTML = "0";
+}
+
+
+
