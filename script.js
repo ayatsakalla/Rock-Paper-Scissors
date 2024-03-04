@@ -87,8 +87,8 @@ function playRound(userChoice) {
     // get random computer choice end 
 
     // img display choices start
-    playerImg.src = `${userChoice}.jpg`;
-    compImg.src = `${compChoice}.jpg`;
+    playerImg.src = `choices/${userChoice}.jpg`;
+    compImg.src = `choices/${compChoice}.jpg`;
     //img display choices end
 
     // user choices and win/loss/tie to comp choices start
